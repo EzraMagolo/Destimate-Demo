@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<link href="./main.css" rel="stylesheet" />
+<link href="./index.css" rel="stylesheet" />
+<script src="bootstrap.bundle.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<script src="https://kit.fontawesome.com/6cc32463b3.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OneStop</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="destimate.png" alt="Logo" style="width:80px; "class="d-flex align-items-center bg-light rounded-circle p-2" >
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav topnav">
+                <li class="badge ">
+                    <a class="nav-link " href="#">Home</a>
+                </li>
+                <li class="badge">
+                    <a class="nav-link" href="#">History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-image">
+       
+        <div>
+            <div class="clock" id="time">
+            
+            </div>
+            <form class="form-group">
+                <div>
+                    <label for="from" class="badge badge-primary"><i class="fa-solid fa-circle-dot"></i></label>
+                    <div class="">
+                        <input type="text" id="from" placeholder="From" class="form-control">
+                    </div>
+                </div>
+                <div class="mb-4">
+
+                    <label for="to" class="badge badge-info"><i class="fa-solid fa-map-pin"></i></label>
+                    <div class="">
+                        <input type="text" id="to" placeholder="Where To" class="form-control">
+                    </div>
+
+                </div>
+
+            </form>
+
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg " onclick="calcRoute(); document.getElementById('output1').scrollIntoView()"><i class="fa-solid fa-diamond-turn-right"></i>Estimate</button>
+            </div>
+        
+
+            <br>
+
+            
+        </div>
+        <div class="container mx-auto sm:px-4 fluid">
+            <div class="map"id="map">
+
+            </div>
+
+            <div class="text-center">
+                <button type="button" class="btn btn-info btn-lg " onclick="trafficSet(); this.classList.toggle('active')"><i
+                        class="fas fa-exclamation-triangle"></i>Traffic</button>
+            </div>
+            
+
+
+            <div class="card" id="output">
+                <img src="Uber.png" class="card-img-top " style="width:80px;" alt="Uber">
+                <div class="card-body">
+                    
+                    
+                    <a href="#" class="btn btn-primary">Order Uber</a>
+                </div>
+            </div>
+            <div  >
+
+            </div>
+            <br>
+            <div class="card" id="output1">
+                <img src="Bolt.png" class="card-img-top" style="width:60px;" alt="Bolt">
+                <div class="card-body">
+                    
+            
+                    <a href="#" class="btn btn-primary">Order Bolt</a>
+                </div>
+            </div>
+            <div>
+            
+            </div>
+
+        </div>
+
+    </div>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlWrlE6W7asmoeebf-aCmgGND1XG5twkQ&libraries=places&region=KE"></script>
+
+
+<script src="Main.js"></script>
+<script src="outputcard.js"></script>
+</body>
+
+</html>
